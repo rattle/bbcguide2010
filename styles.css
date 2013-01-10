@@ -1,0 +1,316 @@
+/* --------------------------------------------------------------
+
+BBC Pocket Guide 2010
+
+Title: Main presentation
+Author: andrew@rattlecentral.com
+Version: 1.0
+Date: 17/12/2010
+
+-------------------------------------------------------------- */
+
+/* Global
+----------------------------------------------------------------*/
+
+hr {display: none;}
+
+abbr {border: none;}
+abbr[title="and"] {font-style: italic;}
+img {max-width: 100%;}
+
+ul, ol {list-style-type: none;}
+
+pre {
+   white-space: pre-wrap;       /* css-3 */
+   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+   white-space: -pre-wrap;      /* Opera 4-6 */
+   white-space: -o-pre-wrap;    /* Opera 7 */
+   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+
+/* reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}
+article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}
+a img{border:0}
+figure{position:relative}
+figure img{width:100%}
+
+/* Body
+----------------------------------------------------------------*/
+
+
+body {
+  font-family: "BentonSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 75%;   /* 12px */
+  line-height: 1.5; /* 18px Baseline grid */
+  color:#000;
+  color: rgba(0,0,0,0.8);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  }
+
+a, button {
+  color: #4089ed;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #ededed;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+a:hover,a:focus, button:hover {color: #000; border-bottom: 1px solid #ccc;}
+
+/* Headers and base type
+----------------------------------------------------------------*/
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+
+p {margin: 0 0 1em 0; color: #333;}
+
+
+
+/* Header
+----------------------------------------------------------------*/
+
+header {
+  position: fixed;
+  z-index: 10;
+  left: 6%;
+  right: 6%;
+  top: 2em;
+  padding: 0 0 2em 0;
+  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+header h2 {font-size: 1.167em; font-weight: normal;}
+
+button {}
+.prev, .next {
+  position: fixed;
+  cursor: pointer;
+  top: 70px;
+  z-index: 1000;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  }
+
+.prev {right: 10%;}
+.prev.disabled, .next.disabled {color: #ccc;}
+.prev.disabled:hover, .next.disabled:hover {border: none;}
+.prev:focus, .prev:hover {}
+.next {right: 6%;}
+.next:focus, .next:hover {}
+
+
+/* Layout
+----------------------------------------------------------------*/
+
+.container {
+  position: absolute;
+  z-index: 100;
+  top: 180px;
+  left: 0;
+  bottom: 32px;
+  padding: 0 6%;
+  white-space: nowrap;
+  width: 7500px;
+  }
+
+article {
+  float: left;
+  position: relative;
+  height: 100%;
+  margin: 0 10px 0 0;
+  width: 450px;
+  white-space: normal;
+  }
+
+.panel {
+  position: absolute;
+  left: 0;
+  max-height: 100%;
+  right: 20px;
+  bottom: 34px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3), 4px -1px 4px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3), 4px -1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3), 4px -1px 4px rgba(0,0,0,0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  overflow: auto;
+  margin: 0 0 0 -2px;
+  padding: 1em;
+  }
+
+.panel h3 {font-size: 1em; margin-bottom: 0.5em;}
+.panel img {max-height: 85%;}
+
+
+/* Panels
+----------------------------------------------------------------*/
+
+.intro, .outro {width: 320px; background: none;}
+
+.intro .panel, .outro .panel {
+  overflow: hidden;
+  background: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  }
+
+.intro .panel a {}
+.outro p:first-child {font-weight: bold;}
+.intro p.hint {color: rgba(0,0,0,0.6)}
+
+.graphic img {display: block; margin: 1em 0 0 0;}
+
+/* panel variants */
+.formats {width: 900px;}
+.narrow {width: 400px}
+
+
+/* Footer
+----------------------------------------------------------------*/
+
+footer {
+  position: fixed;
+  left: 6%;
+  right: 6%;
+  bottom:0;
+  padding: 1em 0;
+  z-index: 101;
+  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  }
+
+footer ul {color: #333;color: rgba(0,0,0,0.6);list-style-type: none;}
+
+footer li {display: inline; margin: 0 2em 0 0;}
+footer li.credit {position: absolute; right: 0; margin: 0}
+
+
+
+footer a {color: #69625a; color: rgba(0,0,0,0.6);font-weight: bold; border: 0;}
+footer a:hover {border: 0; color: rgba(0,0,0,1);}
+
+/* Media Queries
+----------------------------------------------------------------*/
+
+@media screen and (max-width:600px) {
+  .panel, footer  {position: relative;}
+  .prev, .next, .intro .hint {display: none;}
+
+  header {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin: 0;
+    padding: 0 0 1em 0;
+  }
+
+  .hide {display: block !important;}
+
+  .container {
+    white-space: normal;
+    position: relative;
+    width: auto !important;
+    padding: 0;
+    top: 80px;
+    float: left;
+    clear: left;
+    margin-bottom: 3em;
+  }
+
+  .intro, .outro {width: 480px; margin: 0; padding: 0;}
+
+  article {margin: 2em 0; float: left; clear: left;}
+
+  .panel {
+    width: 84% !important;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    -o-box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  }
+
+  footer {
+    padding: 2em 6%;
+    left: 0;
+    right: 0;
+    margin-top: 2em;
+    float: left;
+    clear: left;
+    }
+  footer li.credit {position: relative; display: block;}
+
+} /* narrow view end */
+
+
+@media screen and (max-width:400px) {
+
+
+
+}
+
+
+/* iPhone & iPad styles */
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  /* Turn off scroll buttons for iPhone and iPad */
+  .prev, .next {display: none;}
+
+  .graphic input,
+  textarea {
+    width: 100%;
+    -webkit-appearance:textfield;
+    border: 1px solid #999;
+    background: #fff;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+  }
+}
+
+/* iPad only styles */
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+  body {min-height: 650px;}
+  .container {bottom: auto; height: 495px;}
+  footer {bottom:auto; top: 625px;}
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+  body {min-height: 950px;}
+  .container {bottom: auto; height: 790px;}
+  footer {bottom:auto; top: 923px;}
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  header {right: auto; width: auto; padding: 0 160px 10px 10px; min-width: 700px;}
+
+}
+
+
+
